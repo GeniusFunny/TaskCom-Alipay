@@ -1,0 +1,18 @@
+<view class="tc-card">
+    <image class="tc-card-avatar" src="{{avatar}}" background-size="cover"/>
+    <view class="tc-card-infoContainer">
+      <view class="tc-card-nickname">
+        {{nickName}}
+      </view>
+      <view class="tc-card-reputationGroup">
+        <view class="tc-card-reputation tc-card-reputationGroup-firstChild">
+          <view class="tc-card-reputation-value" onTap="scoreClick" id="1">{{daily}}</view>
+          <view class="tc-card-reputation-name">个人</view>
+        </view>
+        <view class="tc-card-reputation">
+          <view class="tc-card-reputation-value" onTap="scoreClick" id="0">{{contend}}</view>
+          <view class="tc-card-reputation-name">多人</view>
+        </view>
+      </view>
+    </view>
+  </view>

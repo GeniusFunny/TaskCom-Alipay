@@ -3,7 +3,7 @@ self.__appxInited = 1;
 require('@alipay/appx-compiler/lib/sjsEnvInit');
 
 require('./config$');
-
+require('./importScripts$');
 
 var AFAppX = self.AFAppX;
 self.getCurrentPages = AFAppX.getCurrentPages;

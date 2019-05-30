@@ -1,0 +1,39 @@
+.tc-card {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 160rpx; }
+  .tc-card-avatar {
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: solid 4rpx #4d3b12; }
+  .tc-card-infoContainer {
+    display: flex;
+    flex-flow: column nowrap; }
+  .tc-card-nickname {
+    font-size: 36rpx;
+    color: #4d3b12;
+    line-height: 27rpx;
+    margin-left: 21rpx;
+    margin-bottom: 51rpx; }
+  .tc-card-reputationGroup {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 481rpx; }
+    .tc-card-reputationGroup-firstChild {
+      margin-left: 79rpx;
+      margin-right: 186rpx; }
+  .tc-card-reputation {
+    text-align: center; }
+    .tc-card-reputation-value {
+      font-size: 45rpx;
+      color: #4d3b12;
+      line-height: 40rpx;
+      margin-bottom: 18rpx; }
+    .tc-card-reputation-name {
+      font-size: 28rpx;
+      color: #997625;
+      line-height: 26rpx;
+      font-weight: 200; 
+      }

@@ -1,4 +1,31 @@
 Page({
+  data: {
+    userInfo: {},
+    taskList: [],
+    menuList: [
+      {
+        id: 'edit',
+        name: '基本资料',
+        tag: '/assets/images/edit.png'
+      },
+      {
+        id: 'future',
+        name: '未来的任务',
+        tag: '/assets/images/data.png'
+      },
+      {
+        id: 'history',
+        name: '任务历史记录',
+        tag: '/assets/images/history.png'
+      }
+    ],
+    sideBarVisible: true,
+    menuUrl: {
+      'edit': '../editInfo/editInfo',
+      'history': '../history/history',
+      'future': '../future/future'
+    }
+  },
   onLoad(query) {
     // 页面加载
     console.info(`Page onLoad with query: ${JSON.stringify(query)}`);

@@ -1,0 +1,19 @@
+<view
+    onClick="changeSideBarVisible"
+    class="tc-sideBar-container {{hidden !== undefined && !hidden? 'active': ''}}"
+  >
+    <view
+      class="tc-sideBar {{hidden !== undefined && !hidden? 'tc-sideBar-active': ''}}"
+    >
+      <view class="tc-sideBar-info">
+        <img class="tc-sideBar-info-img" src="{{avatar}}"/>
+        <view class="tc-sideBar-info-name">{{nickName}}</view>
+      </view>
+      <view class="tc-sideBar-menu-item" v-for="item in menuList" key="{{item.id}}" id="{{item.id}}" onClick="clickMenuItem">
+        <view>
+          <img class="tc-sideBar-menu-item-tag" src="{{item.tag}}"/>
+        </view>
+        <view class="tc-sideBar-menu-item-name">{{item.name}}</view>
+      </view>
+    </view>
+  </view>

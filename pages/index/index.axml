@@ -1,6 +1,16 @@
-<!-- 小程序收藏组件，更多高级用法请参考文档：https://docs.alipay.com/mini/component/component-favorite -->
-<favorite>收藏小程序，下次使用更方便</favorite>
-
-<view>
-  this is a blank page
-</view>
+<view class="personalCenter">
+    <side-bar avatar="{{userInfo.avatar}}" menu-list="{{menuList}}" nickName="{{userInfo.username}}" hidden="{{sideBarVisible}}" changeSideBar="{{changeSideBarVisible}}" clickMenuItem="{{clickMenuItem}}"/>
+    <view class="personalCenter-menu">
+      <image class="personalCenter-menu-icon" src="/assets/images/menu.png" onClick="changeSideBarVisible"/>
+    </view>
+    <card avatar="{{userInfo.avatar}}" contend="{{userInfo.contend}}" nickName="{{userInfo.username}}" daily="{{userInfo.daily}}" getMoreScoreInfo="{{getMoreScoreInfo}}"/>
+    <view class="personalCenter-task">
+      <view class="personalCenter-task-tag">
+        <image src="/assets/images/task.png" />
+        <span >当前任务</span>
+      </view>
+      <view>
+        <task v-for="task in taskList" key="{{task.id}}" taskName="{{task.title}}" deadLine="{{task.endTime}}" taskNum="{{task.totalTask}}" type="{{task.type}}" finishedTaskNum="{{task.finishedTask}}" finishedPlayerNum="{{task.finishedPeople}}" id="{{task.groupId}}" task="{{getTaskMoreInfo}}"/>
+      </view>
+    </view>
+  </view>

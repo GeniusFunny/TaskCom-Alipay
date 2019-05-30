@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/* 字体设置 */
+/* 边框设置 */
+/* 宽高设置 */
+/*  flex相关  */
+/* 横向盒子 */
+/* 竖向盒子 */
+/* 水平居中盒子 */
+/* 垂直居中盒子 */
+/* 水平垂直居中盒子 */
+/*  设置头像大小、圆角等  */
+.tc-sideBar-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: -100%; }
+
+.active {
+  left: 0; }
+
+.tc-sideBar {
+  width: 352rpx;
+  height: 1206rpx;
+  position: absolute;
+  left: -100%;
+  background-color: #ffffff; }
+  .tc-sideBar-active {
+    left: 0;
+    transition: left 0.4s; }
+  .tc-sideBar-info-img {
+    width: 144rpx;
+    height: 144rpx;
+    margin-top: 128rpx;
+    margin-left: 100rpx;
+    margin-right: 108rpx;
+    margin-bottom: 31rpx;
+    border-radius: 50%; }
+  .tc-sideBar-info-name {
+    font-size: 32rpx;
+    color: #2e2e2e;
+    text-align: center;
+    margin-bottom: 100rpx; }
+  .tc-sideBar-menu-item {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 58rpx;
+    margin-bottom: 21rpx;
+    margin-left: 20rpx; }
+    .tc-sideBar-menu-item-name {
+      font-size: 28rpx;
+      color: #2e2e2e;
+      line-height: 26rpx;
+      padding-top: 15rpx; }
+    .tc-sideBar-menu-item-tag {
+      width: 50rpx;
+      height: 50rpx;
+      margin-right: 15rpx; }
+
+/*# sourceMappingURL=index.css.map */

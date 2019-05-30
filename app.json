@@ -3,6 +3,21 @@
     "pages/index/index"
   ],
   "window": {
-    "defaultTitle": "My App"
+    "defaultTitle": "TaskCom",
+    "titleBarColor": "#ffc53d",
+    "backgroundColor": "#ffc53d"
+  },
+  "tabBar": {
+    "textColor": "#999999",
+    "selectedColor": "#4d4d4d",
+    "backgroundColor": "#ffffff",
+    "items":[
+      {
+        "name": "我的",
+        "pagePath": "pages/index/index",
+        "icon": "/assets/images/1st.png",
+        "activeIcon": "/assets/images/m2.png"
+      }
+    ]
   }
 }
