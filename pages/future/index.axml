@@ -1,0 +1,10 @@
+<view class="history">
+  <view class="history-task">
+    <view>
+      <view a:if="{{taskList !== undefined && taskList.length === 0}}" style="color: #997625; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 28rpx;">
+          小主，这里是空的。
+      </view>
+      <future a:for="{{taskList}}" key="{{index}}" taskName="{{item.title}}" id="{{item.groupId}}" startTime="{{item.startTime}}" type="{{item.type}}" task="{{getTaskMoreInfo}}" onSubmit="{{getFormId}}" />
+    </view>
+  </view>
+</view>

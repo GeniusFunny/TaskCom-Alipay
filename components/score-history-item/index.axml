@@ -1,0 +1,12 @@
+<view class="tc-historyScore-item">
+    <view class="tc-historyScore-item-tag">
+      <img src="{{info.sponsorAvatar}}"/>
+    </view>
+    <view class="tc-historyScore-item-content">
+      <view class="tc-historyScore-item-content-title">{{info.title}}</view>
+      <view class="tc-historyScore-item-content-time">{{info.time}}</view>
+    </view>
+    <view class="tc-historyScore-item-score">
+      +{{info.score}}
+    </view>
+  </view>

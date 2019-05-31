@@ -1,0 +1,16 @@
+<view>
+  <view class=" task {{!fromMessage? 'task-fullScreen': ''}}">
+    <info-item name="{{info.title.name}}" value="{{info.title.value}}"/>
+    <info-item name="{{info.date.name}}" value="{{info.date.value}}"/>
+    <info-item name="{{info.time.name}}" value="{{info.time.value}}"/>
+
+    <taskList type="finished" taskList="{{info.finishedTaskList}}"/>
+    <taskList type="unfinished" taskList="{{info.unfinishedTaskList}}" changeTaskState="{{subTaskClick}}"/>
+    <avatarList a:if="{{info.isPublic}}" avatarList="{{info.avatarList}}" changeUserTaskInfo="{{changeCurrentUserTaskInfo}}" currentUser="{{info.currentUser}}" />
+  </view>
+  <view style="height: 102rpx;" a:if="{{fromMessage}}">
+    <button onTap="{{jumpToPersonalCenter}}">
+        返回个人中心
+    </button>
+  </view>
+</view>

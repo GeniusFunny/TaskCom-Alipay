@@ -1,0 +1,4 @@
+<view class="scoreHistory">
+  <view a:if="{{historyList !== undefined && historyList.length === 0 && hasLoaded}}" style="color: #997625; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 28rpx;">小主，这里是空的。</view>
+  <score a:for="historyList" info="{{item}}" key="{{index}}"/>
+</view>

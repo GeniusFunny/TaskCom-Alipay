@@ -1,3 +1,8 @@
+import { GetUserInfo, GetCurrentTask, GetScore, SubmitForm } from '../../api/API'
+import { setStorage, jumpTo, showLoading, hideLoading } from '../../utils/aliUtils'
+import { normalizeTimeHours } from '../../utils/utils'
+
+
 Page({
   data: {
     userInfo: {},
@@ -26,14 +31,79 @@ Page({
       'future': '../future/future'
     }
   },
+  methods: {
+    parseInfo(data) {
+      for (let key in data) {
+        this.userInfo[key] = data[key]
+      }
+    },
+    parseScore(data) {
+      this.userInfo.daily = data.personScore || 0
+      this.userInfo.contend = data.peopleScore || 0
+    },
+    parseTaskList(data) {
+      data.forEach(item => {
+        item.endTime = normalizeTimeHours(item.endTime).split(' ')[1]
+        item.type = item.type === 0 ? 'multiPlayer' : 'daily'
+      })
+      this.taskList = data
+    },
+    getTaskList() {
+      GetCurrentTask()
+        .then(res => {
+          this.parseTaskList(res.data.groups)
+        })
+    },
+    getTaskMoreInfo(key, formId) {
+      console.log(formId)
+      setStorage('state', 'now')
+      SubmitForm({ formId: formId, type: 1 })
+      setStorage('currentTaskId', parseInt(key))
+      jumpTo('../task/task')
+    },
+    changeSideBarVisible() {
+      this.sideBarVisible = !this.sideBarVisible
+    },
+    clickMenuItem(key) {
+      jumpTo(this.menuUrl[key])
+    },
+    getMoreScoreInfo(key) {
+      jumpTo(`../scoreHistory/scoreHistory?type=${key}`)
+    }
+  },
   onLoad(query) {
     // 页面加载
-    console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
+    showLoading()
+    GetUserInfo()
+      .then(res => {
+        this.parseInfo(res.data.info)
+        return GetScore()
+      })
+      .then(res => {
+        this.parseScore(res.data.score)
+        return GetCurrentTask()
+      })
+      .then(res => {
+        this.parseTaskList(res.data.groups)
+        hideLoading()
+      })
+      .catch(err => {
+        hideLoading()
+        console.log(err)
+      })
   },
   onReady() {
     // 页面加载完成
   },
   onShow() {
+    GetUserInfo()
+      .then(res => {
+        this.userInfo.username = res.data.info.username
+        return GetCurrentTask()
+      })
+      .then(res => {
+        this.parseTaskList(res.data.groups)
+      })
     // 页面显示
   },
   onHide() {
@@ -46,7 +116,23 @@ Page({
     // 标题被点击
   },
   onPullDownRefresh() {
-    // 页面被下拉
+    GetUserInfo()
+      .then(res => {
+        this.parseInfo(res.data.info)
+        return GetScore()
+      })
+      .then(res => {
+        this.parseScore(res.data.score)
+        return GetCurrentTask()
+      })
+      .then(res => {
+        this.parseTaskList(res.data.groups)
+        wx.stopPullDownRefresh()
+      })
+      .catch(err => {
+        wx.stopPullDownRefresh()
+        console.log(err)
+      })
   },
   onReachBottom() {
     // 页面被拉到底部

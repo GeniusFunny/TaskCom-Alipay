@@ -1,0 +1,65 @@
+<view class="editInfo">
+  <view class="editInfo-container">
+    <view class="editInfo-module editInfo-module-1">
+      <view class="editInfo-avatarItem">
+        <view class="editInfo-avatarItem-name">
+            头像
+        </view>
+        <view class="editInfo-avatarItem-avatar">
+          <img src="{{info.avatar}}"/>
+        </view>
+      </view>
+      <view class="editInfo-normalItem">
+        <view>
+            昵称
+        </view>
+        <input class="editInfo-normalItem-value" type="text" placeholder="未设置" value="{{info.username}}" maxlength="14" onInput="{{bindUsernameChange}}"/>
+      </view>
+      <view class="editInfo-normalItem">
+        <view>
+            性别
+        </view>
+        <view class="editInfo-normalItem-img">
+          <img src="{{images.man}}" onTap="changeGender" id="man"/>
+          <img src="{{images.woman}}" onTap="changeGender" id="woman"/>
+        </view>
+      </view>
+      <view class="editInfo-normalItem">
+        <view>
+            出生年月
+        </view>
+        <picker mode="date" value="{{info.birthday}}" start="1990-01-01" end="2018-12-31" onChange="{{bindBirthdayChange}}">
+          <view class="editInfo-normalItem-value">
+              {{info.birthday}}
+          </view>
+        </picker>
+      </view>
+      <view class="editInfo-normalItem">
+        <view>
+            地区
+        </view>
+        <input class="editInfo-normalItem-value" type="text" placeholder="未设置" value="{{info.location}}" onInput="{{bindLocationChange}}"/>
+      </view>
+    </view>
+    <view class="editInfo-module editInfo-module-2">
+      <view class="editInfo-normalItem">
+        <view>
+            大学
+        </view>
+        <input class="editInfo-normalItem-value" type="text" placeholder="未设置" value="{{info.collage}}" onInput="{{bindCollageChange}}"/>
+      </view>
+      <view class="editInfo-normalItem">
+        <view>
+            年级
+        </view>
+        <picker class="editInfo-normalItem-value" value="{{info.grade}}" range="{{infoOptions.gradeData}}" onChange="{{bindGradeChange}}">
+            {{infoOptions.gradeData[info.grade] || '未设置'}}
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class="editInfo-bottomButton" onTap="{{bindClickSubmit}}">
+    <img src="/images/button.png" />
+    <view class="editInfo-bottomButton-content">保存</view>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<view>
+  <view class="task {{!share? 'task-fullScreen': ''}}">
+    <info-item name="{{info.title.name}}" value="{{info.title.value}}"/>
+    <info-item name="{{info.date.name}}" value="{{info.date.value}}"/>
+    <info-item name="{{info.time.name}}" value="{{info.time.value}}"/>
+    <task-list taskList="{{info.TaskList}}"/>
+    <avatar-list a:if="{{info.isPublic}}" avatarList="{{info.avatarList}}"/>
+  </view>
+  <view a:if="{{share !== undefined && share}}" class="tc-button">
+    <form-button button-content="{{buttonContent}}" getFormId="{{getFormId}}" active="{{canClick}}"/>
+  </view>
+</view>

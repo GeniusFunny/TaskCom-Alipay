@@ -1,5 +1,8 @@
 {
   "usingComponents": {
-    
+    "info-item": "/components/info-item/index",
+    "task-list": "/components/task-list/index",
+    "avatar-list": "/components/avatar-list/index",
+    "form-button": "/components/form-button/index"
   }
 }

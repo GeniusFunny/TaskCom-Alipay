@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* 字体设置 */
+/* 边框设置 */
+/* 宽高设置 */
+/*  flex相关  */
+/* 横向盒子 */
+/* 竖向盒子 */
+/* 水平居中盒子 */
+/* 垂直居中盒子 */
+/* 水平垂直居中盒子 */
+/*  设置头像大小、圆角等  */
+.scoreHistory {
+  min-height: 100vh;
+  background-color: #ffc53d;
+  padding: 30rpx; }
+
+/*# sourceMappingURL=a.css.map */

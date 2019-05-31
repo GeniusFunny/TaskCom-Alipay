@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/* 字体设置 */
+/* 边框设置 */
+/* 宽高设置 */
+/*  flex相关  */
+/* 横向盒子 */
+/* 竖向盒子 */
+/* 水平居中盒子 */
+/* 垂直居中盒子 */
+/* 水平垂直居中盒子 */
+/*  设置头像大小、圆角等  */
+.tc-historyScore-item {
+  background-color: #ffffff;
+  margin-bottom: 23rpx;
+  width: 690rpx;
+  height: 128rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 6rpx;
+  padding: 24rpx 30rpx 16rpx 30rpx; }
+  .tc-historyScore-item-tag {
+    margin-right: 38rpx; }
+    .tc-historyScore-item-tag img {
+      width: 88rpx;
+      height: 88rpx;
+      border-radius: 50%; }
+  .tc-historyScore-item-content {
+    display: flex;
+    flex-flow: column nowrap; }
+    .tc-historyScore-item-content-title {
+      font-size: 28rpx;
+      color: #33270c;
+      line-height: 30rpx;
+      margin-bottom: 10rpx; }
+    .tc-historyScore-item-content-time {
+      font-size: 24rpx;
+      color: #997625;
+      line-height: 18rpx; }
+  .tc-historyScore-item-score {
+    position: absolute;
+    margin-top: -8rpx;
+    right: 60rpx;
+    font-size: 36rpx;
+    color: #33270c; }
+
+/*# sourceMappingURL=a.css.map */

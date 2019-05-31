@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    
+    "score": "/components/score-history-item/index"
   }
 }

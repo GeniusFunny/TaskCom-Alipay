@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/* 字体设置 */
+/* 边框设置 */
+/* 宽高设置 */
+/*  flex相关  */
+/* 横向盒子 */
+/* 竖向盒子 */
+/* 水平居中盒子 */
+/* 垂直居中盒子 */
+/* 水平垂直居中盒子 */
+/*  设置头像大小、圆角等  */
+.find {
+  min-height: 100vh;
+  background-color: #ffc53d;
+  padding: 30rpx;
+  padding-top: 0;
+  border-radius: 6rpx;
+  box-sizing: border-box; }
+  .find-restRank {
+    margin-top: 40rpx;
+    background-color: #ffffff;
+    padding-bottom: 40rpx;
+    border-radius: 6rpx; }
+    .find-restRank-item {
+      display: flex;
+      flex-flow: row nowrap;
+      width: 690rpx;
+      height: 100rpx;
+      box-sizing: border-box;
+      align-items: center;
+      padding-top: 17rpx;
+      padding-left: 40rpx;
+      padding-right: 34rpx; }
+      .find-restRank-item-avatar {
+        width: 64rpx;
+        height: 64rpx;
+        border-radius: 50%;
+        margin-right: 19rpx; }
+      .find-restRank-item-name {
+        font-size: 28rpx;
+        color: #33270c; }
+      .find-restRank-item-position {
+        font-size: 32rpx;
+        color: #33270c;
+        margin-right: 50rpx;
+        min-width: 30rpx; }
+      .find-restRank-item-score {
+        position: absolute;
+        right: 64rpx;
+        font-size: 32rpx;
+        color: #33270c; }
+  .find-village {
+    margin-top: 13rpx; }
+    .find-village-item {
+      margin-bottom: 15rpx; }
+      .find-village-item-tag {
+        font-size: 24rpx;
+        color: #33270c;
+        margin-left: 30rpx; }
+        .find-village-item-tag img {
+          width: 80rpx;
+          height: 80rpx;
+          border-radius: 50%;
+          margin-bottom: -30rpx;
+          margin-right: 10rpx; }
+      .find-village-item-content {
+        width: 690rpx;
+        height: 176rpx;
+        box-sizing: border-box;
+        border-radius: 6rpx;
+        padding-top: 45rpx;
+        padding-left: 31rpx;
+        padding-right: 31rpx;
+        background-color: #ffffff; }
+        .find-village-item-content-title {
+          font-size: 32rpx;
+          color: #33270c;
+          line-height: 31rpx;
+          margin-bottom: 23rpx; }
+        .find-village-item-content-time {
+          font-size: 24rpx;
+          color: #997625;
+          line-height: 19rpx; }
+        .find-village-item-content-members-count {
+          width: 56rpx;
+          height: 56rpx;
+          margin-left: 10rpx;
+          display: inline-block;
+          border-radius: 50%;
+          background-color: rgba(255, 192, 63, 0.2);
+          float: right; }
+          .find-village-item-content-members-count view {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            font-size: 24rpx;
+            color: #ffc53d;
+            padding-top: 19rpx;
+            line-height: 19rpx; }
+        .find-village-item-content-members img {
+          width: 56rpx;
+          height: 56rpx;
+          border-radius: 50%;
+          float: right;
+          margin-left: 10rpx; }
+
+/*# sourceMappingURL=a.css.map */

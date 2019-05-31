@@ -1,0 +1,47 @@
+<view class="find">
+    <tab type="{{info.type}}" changeTab="{{changeTab}}"/>
+    <view hidden="{{info.type !== undefined && info.type === 'village'}}">
+      <rankItem a:for="{{rankList.top3}}" username="{{item.username}}" score="{{item.peopleScore}}" position="{{index + 1}}" avatar="{{item.avatar}}" key="{{index}}" />
+    </view>
+
+    <view hidden="{{info.type !== undefined && info.type === 'village'}}" class="find-restRank">
+      <view a:for="{{rankList.rest}}" class="find-restRank-item" key="{{index}}">
+        <view class="find-restRank-item-position">{{index + 4}}</view>
+        <img class="find-restRank-item-avatar" src="{{item.avatar}}"/>
+        <view class="find-restRank-item-name">{{item.username}}</view>
+        <view class="find-restRank-item-score">{{item.peopleScore}}</view>
+      </view>
+    </view>
+    <view
+      hidden="{{info.type !== 'village'}}"
+      class="find-village"
+      onTap="{{getTaskMoreInfo}}"
+    >
+      <view style="text-align: center; font-size: 18rpx; color: #997625;">每次下拉都有不同的体验</view>
+      <view a:for="(villageTaskList" class="find-village-item" key="{{index}}">
+        <view class="find-village-item-tag">
+          <img src="{{item.sponsorAvatar}}"/>
+          <span>{{item.sponsorName}}</span>
+          <view style="position: absolute; right: 35rpx; margin-top: -32rpx">
+            @{{item.sponsorCollage}}
+          </view>
+        </view>
+        <view class="find-village-item-content" id="{{item.groupId}}">
+          <view class="find-village-item-content-title" id="{{item.groupId}}">
+            {{item.title}}
+          </view>
+          <view class="find-village-item-content-time" id="{{item.groupId}}">
+            {{item.time}}
+          </view>
+          <view class="find-village-item-content-members">
+            <view a:if="{{item.members.length > 3}}" class="find-village-item-content-members-count">
+              <view>
+                +{{item.members.length - 3}}
+              </view>
+            </view>
+            <image a:for="item.members" src="{{item.avatar}}" key="{{index}}" a:if="{{index <= 2}}"/>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>

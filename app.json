@@ -1,7 +1,14 @@
 {
   "pages": [
     "pages/personalCenter/index",
-    "pages/add/index"
+    "pages/add/index",
+    "pages/find/index",
+    "pages/task/index",
+    "pages/simpleTask/index",
+    "pages/history/index",
+    "pages/scoreHistory/index",
+    "pages/future/index",
+    "pages/editInfo/index"
   ],
   "window": {
     "defaultTitle": "TaskCom",
@@ -27,7 +34,7 @@
       },
       {
         "name": "发现",
-        "pagePath": "pages/personalCenter/index",
+        "pagePath": "pages/find/index",
         "icon": "images/find1.png",
         "activeIcon": "images/find2.png"
       }
