@@ -1,5 +1,5 @@
 <view class="tc-textarea">
   <label>任务{{index + 1}}</label>
   <textarea value="{{info.value}}" placeholder="30字以内" maxlength="30" id="{{info.id}}" onInput="changeTextarea"></textarea>
-  <img src="/images/delete.png" id="{{info.id}}" onTap="deleteTexterea"/>
+  <image src="/images/delete.png" id="{{info.id}}" onTap="deleteTexterea"/>
 </view>

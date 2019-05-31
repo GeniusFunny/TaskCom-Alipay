@@ -30,7 +30,7 @@
   .tc-sideBar-active {
     left: 0;
     transition: left 0.4s; }
-  .tc-sideBar-info-img {
+  .tc-sideBar-info-image {
     width: 144rpx;
     height: 144rpx;
     margin-top: 128rpx;

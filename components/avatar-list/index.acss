@@ -32,7 +32,7 @@
       flex-flow: column nowrap;
       align-items: center;
       margin-left: 31rpx; }
-      .tc-avatarList-body-item img {
+      .tc-avatarList-body-item image {
         box-sizing: border-box;
         width: 88rpx;
         height: 88rpx;

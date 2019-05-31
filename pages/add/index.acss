@@ -15,7 +15,7 @@
     background-color: #ffd470;
     margin-top: 21rpx;
     margin-left: 30rpx; }
-    .add-addTaskItem img {
+    .add-addTaskItem image {
       position: relative;
       top: 50%;
       transform: translateY(-50%);
@@ -43,7 +43,7 @@
   bottom: 0;
   align-items: center;
   background-color: #ffffff; }
-  .tc-button img {
+  .tc-button image {
     width: 690rpx;
     height: 88rpx; }
   .tc-button-info {

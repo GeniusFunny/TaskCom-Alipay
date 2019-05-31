@@ -4,5 +4,6 @@
     "task-list": "/components/task-list/index",
     "avatar-list": "/components/avatar-list/index",
     "form-button": "/components/form-button/index"
-  }
+  },
+  "defaultTitle": "任务详情"
 }

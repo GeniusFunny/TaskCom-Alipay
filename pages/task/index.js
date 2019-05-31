@@ -1,3 +1,7 @@
+import { GetUserInfo, GetCurrentTask, GetScore, SubmitForm } from '../../api/API'
+import { setStorage, jumpTo, showLoading, hideLoading, getStorage } from '../../utils/aliUtils'
+import { normalizeTimeHours } from '../../utils/utils'
+
 Page({
   data: {
     info: {

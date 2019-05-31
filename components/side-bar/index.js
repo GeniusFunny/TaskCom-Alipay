@@ -1,20 +1,22 @@
 Component({
   props: {
     menuList: [],
-    avatar: '',
-    nickName: 'Task',
+    avatar: '/images/avatar.jpeg',
+    nickName: '乾舟',
     hidden: true,
-    id: '123'
+    id: '123',
+    changeSideBar: '',
+    clickMenuItem: '',
+  },
+  didMount() {
+    console.log(this.props)
   },
   methods: {
-    changeSideBarVisible () {
-      this.hidden = true
-      console.log(this.props)
-      // this.$emit('changeSideBar')
+    changeSideBarVisible() {
+      this.props.onChangeSideBarVisible()
     },
-    clickMenuItem (e) {
-      console.log(123)
-      // this.$emit('clickMenuItem', e.currentTarget.id)
+    clickMenuItem(e) {
+      this.props.onClickMenuItem(e.currentTarget.id)
     }
   }
 })

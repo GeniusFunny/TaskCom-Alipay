@@ -45,7 +45,7 @@
     margin-right: 31rpx; }
 
 /*# sourceMappingURL=index.css.map */
-.history-img {
+.history-image {
   width: 128rpx;
   height: 70rpx;
   margin-top: -10rpx; }

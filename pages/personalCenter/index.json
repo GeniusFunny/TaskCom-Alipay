@@ -3,5 +3,6 @@
     "card": "/components/card/index",
     "task": "/components/task/index",
     "side-bar": "/components/side-bar/index"
-  }
+  },
+  "defaultTitle": "个人中心"
 }

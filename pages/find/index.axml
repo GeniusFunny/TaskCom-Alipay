@@ -7,7 +7,7 @@
     <view hidden="{{info.type !== undefined && info.type === 'village'}}" class="find-restRank">
       <view a:for="{{rankList.rest}}" class="find-restRank-item" key="{{index}}">
         <view class="find-restRank-item-position">{{index + 4}}</view>
-        <img class="find-restRank-item-avatar" src="{{item.avatar}}"/>
+        <image class="find-restRank-item-avatar" src="{{item.avatar}}"/>
         <view class="find-restRank-item-name">{{item.username}}</view>
         <view class="find-restRank-item-score">{{item.peopleScore}}</view>
       </view>
@@ -20,7 +20,7 @@
       <view style="text-align: center; font-size: 18rpx; color: #997625;">每次下拉都有不同的体验</view>
       <view a:for="(villageTaskList" class="find-village-item" key="{{index}}">
         <view class="find-village-item-tag">
-          <img src="{{item.sponsorAvatar}}"/>
+          <image src="{{item.sponsorAvatar}}"/>
           <span>{{item.sponsorName}}</span>
           <view style="position: absolute; right: 35rpx; margin-top: -32rpx">
             @{{item.sponsorCollage}}

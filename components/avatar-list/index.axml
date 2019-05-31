@@ -5,7 +5,7 @@
         a:for="{{avatarList}}"
         key="{{index}}"
       >
-        <img
+        <image
           src="{{item.avatar}}"
           id="{{item.userId}}"
           class="{{currentUser === item.userId? 'tc-avatarList-body-item-active' : ''}}"

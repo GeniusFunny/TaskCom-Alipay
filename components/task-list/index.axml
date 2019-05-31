@@ -1,10 +1,10 @@
 <view class="tc-taskList">
   <view class="tc-taskList-tag">
-    <img src="{{type === 'finished' ? '/images/finished_task.png': '/images/unfinished_task.png'}}" />
+    <image src="{{type === 'finished' ? '/images/finished_task.png': '/images/unfinished_task.png'}}" />
   </view>
   <view class="tc-taskList-body" onTap="optionClick">
     <view class="tc-taskList-body-item" a:for="{{taskList}}" key="{{index}}">
-      <img class="tc-taskList-body-item-tag" src="{{type === 'finished' ? '/images/ok.png': '/images/pending.png'}}" id="{{item.itemId}}" />
+      <image class="tc-taskList-body-item-tag" src="{{type === 'finished' ? '/images/ok.png': '/images/pending.png'}}" id="{{item.itemId}}" />
       <view class="tc-taskList-body-item-value">{{item.content}}</view>
     </view>
   </view>

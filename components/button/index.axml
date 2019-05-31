@@ -1,5 +1,5 @@
 <view class="tc-button" id="button" onClick="handleClick">
-    <img src="/images/button.png"/>
+    <image src="/images/button.png"/>
     <view class="tc-button-info">
       <slot></slot>
     </view>

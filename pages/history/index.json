@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "history": "/components/history/index"
-  }
+  },
+  "defaultTitle": "历史任务"
 }

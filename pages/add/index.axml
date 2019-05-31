@@ -5,11 +5,11 @@
       <tc-input info="{{info.taskName}}" changeTaskName="changeTaskName"/>
       <tc-textarea a:for="{{info.taskList}}" info="{{item}}" key="{{item.id}}" index="{{index}}" changeTaskItemContent="{{changeTaskItemContent}}" deleteTaskItem="{{deleteTaskItem}}"/>
       <view class="add-addTaskItem">
-        <img src="/images/addButton.png" onTap="{{addSubTask}}" id="img"/>
+        <image src="/images/addButton.png" onTap="{{addSubTask}}" id="image"/>
       </view>
       <view class="add-addTaskItem-info">
           添加任务项，获得多倍积分, 完成后次日到账
-        <img class="add-addTaskItem-info-tag" src="/images/jifen.png"/>
+        <image class="add-addTaskItem-info-tag" src="/images/jifen.png"/>
       </view>
       <view class="add-info-margin"></view>
       <tc-input info="{{info.startDate}}" changeStartDate="{{changeStartDate}}"/>

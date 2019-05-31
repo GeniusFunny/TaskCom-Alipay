@@ -1,14 +1,14 @@
 {
   "pages": [
     "pages/personalCenter/index",
+    "pages/editInfo/index",
     "pages/add/index",
     "pages/find/index",
     "pages/task/index",
     "pages/simpleTask/index",
     "pages/history/index",
     "pages/scoreHistory/index",
-    "pages/future/index",
-    "pages/editInfo/index"
+    "pages/future/index"
   ],
   "window": {
     "defaultTitle": "TaskCom",

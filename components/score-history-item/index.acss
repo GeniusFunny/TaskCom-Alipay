@@ -22,7 +22,7 @@
   padding: 24rpx 30rpx 16rpx 30rpx; }
   .tc-historyScore-item-tag {
     margin-right: 38rpx; }
-    .tc-historyScore-item-tag img {
+    .tc-historyScore-item-tag image {
       width: 88rpx;
       height: 88rpx;
       border-radius: 50%; }

@@ -1,9 +1,9 @@
 const FILEURL = ''  //  文件服务器地址
 
-const toast = (title = '提示', type = 'success', duration = 1500) => {
+const toast = (content = '提示', type = 'success', duration = 1500) => {
   return new Promise((resolve, reject) => {
     my.showToast({
-      title,
+      content,
       type,
       duration,
       success: res => resolve(res),
@@ -51,7 +51,7 @@ const setStorage = (key, value) => {
   my.setStorageSync(key, value)
 }
 
-const chooseImg = (count = 9) => {
+const chooseimage = (count = 9) => {
   return new Promise((resolve, reject) => {
     my.chooseImage({
       count,
@@ -100,7 +100,7 @@ export {
   modal,  //  模态框
   getStorage, //  读取缓存（同步）
   setStorage, //  设置缓存（同步）
-  chooseImg,  //  选取图片
+  chooseimage,  //  选取图片
   wxLogin,  //  登录微信服务器
   upLoad,  // 上传,
   jumpTo  //  页面跳转

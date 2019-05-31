@@ -32,7 +32,7 @@
     width: 615rpx;
     height: 76rpx;
     margin-left: 45rpx; }
-  .tc-textarea img {
+  .tc-textarea image {
     width: 50rpx;
     height: 56rpx;
     position: relative;

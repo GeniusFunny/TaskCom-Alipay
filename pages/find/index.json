@@ -2,5 +2,6 @@
   "usingComponents": {
     "rank-item": "/components/rank-item/index",
     "tab": "/components/tab/index"
-  }
+  },
+  "defaultTitle": "发现"
 }

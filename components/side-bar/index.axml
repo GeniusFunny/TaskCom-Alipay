@@ -1,17 +1,17 @@
 <view
-    onClick="changeSideBarVisible"
+    onTap="changeSideBarVisible"
     class="tc-sideBar-container {{hidden !== undefined && !hidden? 'active': ''}}"
   >
     <view
       class="tc-sideBar {{hidden !== undefined && !hidden? 'tc-sideBar-active': ''}}"
     >
       <view class="tc-sideBar-info">
-        <img class="tc-sideBar-info-img" src="{{avatar}}"/>
+        <image class="tc-sideBar-info-image" src="{{avatar}}"/>
         <view class="tc-sideBar-info-name">{{nickName}}</view>
       </view>
-      <view class="tc-sideBar-menu-item" a:for="{{menuList}}" key="{{item.id}}" id="{{item.id}}" onClick="clickMenuItem">
+      <view class="tc-sideBar-menu-item" a:for="{{menuList}}" key="{{item.id}}" id="{{item.id}}" onTap="clickMenuItem">
         <view>
-          <img class="tc-sideBar-menu-item-tag" src="{{item.tag}}"/>
+          <image class="tc-sideBar-menu-item-tag" src="{{item.tag}}"/>
         </view>
         <view class="tc-sideBar-menu-item-name">{{item.name}}</view>
       </view>

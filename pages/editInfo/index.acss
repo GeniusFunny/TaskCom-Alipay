@@ -52,13 +52,13 @@
       position: absolute;
       text-align: right;
       right: 60rpx; }
-    .editInfo-normalItem-img {
+    .editInfo-normalItem-image {
       position: absolute;
       right: 50rpx;
       margin-top: -8rpx;
       display: flex;
       flex-flow: row nowrap; }
-      .editInfo-normalItem-img img {
+      .editInfo-normalItem-image image {
         width: 58rpx;
         height: 58rpx;
         margin-left: 12rpx; }
@@ -69,7 +69,7 @@
     flex-flow: row nowrap;
     margin-bottom: 50rpx;
     align-items: center; }
-    .editInfo-avatarItem-avatar img {
+    .editInfo-avatarItem-avatar image {
       width: 144rpx;
       height: 144rpx;
       position: relative;
@@ -89,7 +89,7 @@
   align-items: center;
   background-color: #fff;
   margin-left: -30rpx; }
-  .editInfo-bottomButton img {
+  .editInfo-bottomButton image {
     width: 690rpx;
     height: 88rpx;
     display: block; }

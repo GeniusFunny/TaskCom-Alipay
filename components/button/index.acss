@@ -18,7 +18,7 @@
   bottom: 0;
   align-items: center;
   background-color: #ffffff; }
-  .tc-button img {
+  .tc-button image {
     width: 690rpx;
     height: 88rpx; }
   .tc-button-info {

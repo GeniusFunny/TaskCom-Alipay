@@ -34,6 +34,7 @@ require('../../components/history/index');
 require('../../components/score-history-item/index');
 require('../../components/future/index');
 require('../../pages/personalCenter/index');
+require('../../pages/editInfo/index');
 require('../../pages/add/index');
 require('../../pages/find/index');
 require('../../pages/task/index');
@@ -41,7 +42,6 @@ require('../../pages/simpleTask/index');
 require('../../pages/history/index');
 require('../../pages/scoreHistory/index');
 require('../../pages/future/index');
-require('../../pages/editInfo/index');
 }
 self.bootstrapApp ? self.bootstrapApp({ success }) : success();
 }

@@ -5,5 +5,6 @@
    "tab": "/components/tab/index",
    "form-button": "/components/form-button/index",
    "modal": "/components/modal/index"
-  }
+  },
+  "defaultTitle": "新建任务"
 }

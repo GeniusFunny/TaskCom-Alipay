@@ -11,99 +11,107 @@ Page({
       {
         id: 'edit',
         name: '基本资料',
-        tag: '/assets/images/edit.png'
+        tag: '/images/edit.png'
       },
       {
         id: 'future',
         name: '未来的任务',
-        tag: '/assets/images/data.png'
+        tag: '/images/data.png'
       },
       {
         id: 'history',
         name: '任务历史记录',
-        tag: '/assets/images/history.png'
+        tag: '/images/history.png'
       }
     ],
     sideBarVisible: true,
     menuUrl: {
-      'edit': '../editInfo/editInfo',
-      'history': '../history/history',
-      'future': '../future/future'
+      'edit': '../editInfo/index',
+      'history': '../history/index',
+      'future': '../future/index'
     }
   },
-  methods: {
-    parseInfo(data) {
-      for (let key in data) {
-        this.userInfo[key] = data[key]
+  parseInfo(data) {
+    this.setData({
+      userInfo: {
+        ...this.data.userInfo,
+        ...data
       }
-    },
-    parseScore(data) {
-      this.userInfo.daily = data.personScore || 0
-      this.userInfo.contend = data.peopleScore || 0
-    },
-    parseTaskList(data) {
-      data.forEach(item => {
+    })
+  },
+  parseScore(data) {
+    this.setData({
+      userInfo: {
+        ...this.data.userInfo,
+        daily: data.personScore || 0,
+        contend: data.peopleScore || 0
+      }
+    })
+  },
+  parseTaskList(data) {
+    this.setData({
+      taskList: data.map(item => {
         item.endTime = normalizeTimeHours(item.endTime).split(' ')[1]
         item.type = item.type === 0 ? 'multiPlayer' : 'daily'
       })
-      this.taskList = data
-    },
-    getTaskList() {
-      GetCurrentTask()
-        .then(res => {
-          this.parseTaskList(res.data.groups)
-        })
-    },
-    getTaskMoreInfo(key, formId) {
-      console.log(formId)
-      setStorage('state', 'now')
-      SubmitForm({ formId: formId, type: 1 })
-      setStorage('currentTaskId', parseInt(key))
-      jumpTo('../task/task')
-    },
-    changeSideBarVisible() {
-      this.sideBarVisible = !this.sideBarVisible
-    },
-    clickMenuItem(key) {
-      jumpTo(this.menuUrl[key])
-    },
-    getMoreScoreInfo(key) {
-      jumpTo(`../scoreHistory/scoreHistory?type=${key}`)
-    }
+    })
+  },
+  getTaskList() {
+    GetCurrentTask()
+      .then(res => {
+        this.parseTaskList(res.data.groups)
+      })
+  },
+  getTaskMoreInfo(key, formId) {
+    setStorage('state', 'now')
+    SubmitForm({ formId: formId, type: 1 })
+    setStorage('currentTaskId', parseInt(key))
+    jumpTo('../task/task')
+  },
+  onGetMoreScoreInfo(key) {
+    jumpTo(`../scoreHistory/index?type=${key}`)
+  },
+  onChangeSideBarVisible() {
+    this.setData({
+      sideBarVisible: !this.data.sideBarVisible
+    })
+  },
+  onClickMenuItem(key) {
+    jumpTo(this.data.menuUrl[key])
   },
   onLoad(query) {
     // 页面加载
-    showLoading()
-    GetUserInfo()
-      .then(res => {
-        this.parseInfo(res.data.info)
-        return GetScore()
-      })
-      .then(res => {
-        this.parseScore(res.data.score)
-        return GetCurrentTask()
-      })
-      .then(res => {
-        this.parseTaskList(res.data.groups)
-        hideLoading()
-      })
-      .catch(err => {
-        hideLoading()
-        console.log(err)
-      })
+    // showLoading()
+    // GetUserInfo()
+    //   .then(res => {
+    //     this.parseInfo(res.data.info)
+    //     return GetScore()
+    //   })
+    //   .then(res => {
+    //     this.parseScore(res.data.score)
+    //     return GetCurrentTask()
+    //   })
+    //   .then(res => {
+    //     this.parseTaskList(res.data.groups)
+    //     hideLoading()
+    //   })
+    //   .catch(err => {
+    //     hideLoading()
+    //     console.log(err)
+    //   })
   },
   onReady() {
     // 页面加载完成
   },
   onShow() {
-    GetUserInfo()
-      .then(res => {
-        this.userInfo.username = res.data.info.username
-        return GetCurrentTask()
-      })
-      .then(res => {
-        this.parseTaskList(res.data.groups)
-      })
+    // GetUserInfo()
+    //   .then(res => {
+    //     this.userInfo.username = res.data.info.username
+    //     return GetCurrentTask()
+    //   })
+    //   .then(res => {
+    //     this.parseTaskList(res.data.groups)
+    //   })
     // 页面显示
   },
   onHide() {
@@ -127,10 +135,10 @@ Page({
       })
       .then(res => {
         this.parseTaskList(res.data.groups)
-        wx.stopPullDownRefresh()
+        my.stopPullDownRefresh()
       })
       .catch(err => {
-        wx.stopPullDownRefresh()
+        my.stopPullDownRefresh()
         console.log(err)
       })
   },

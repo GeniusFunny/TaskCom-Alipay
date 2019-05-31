@@ -57,7 +57,7 @@
         font-size: 24rpx;
         color: #33270c;
         margin-left: 30rpx; }
-        .find-village-item-tag img {
+        .find-village-item-tag image {
           width: 80rpx;
           height: 80rpx;
           border-radius: 50%;
@@ -98,7 +98,7 @@
             color: #ffc53d;
             padding-top: 19rpx;
             line-height: 19rpx; }
-        .find-village-item-content-members img {
+        .find-village-item-content-members image {
           width: 56rpx;
           height: 56rpx;
           border-radius: 50%;

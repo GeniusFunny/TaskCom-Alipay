@@ -15,7 +15,7 @@
   background-color: #ffffff;
   border-radius: 6rpx;
   margin-bottom: 29rpx; }
-  .tc-taskList-tag img {
+  .tc-taskList-tag image {
     width: 136rpx;
     height: 49rpx;
     margin-top: 8rpx;
