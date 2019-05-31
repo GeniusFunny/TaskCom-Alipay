@@ -1,0 +1,16 @@
+<view class="personalCenter">
+    <side-bar avatar="{{userInfo.avatar}}" menu-list="{{menuList}}" nickName="{{userInfo.username}}" hidden="{{sideBarVisible}}" changeSideBar="{{changeSideBarVisible}}" clickMenuItem="{{clickMenuItem}}"/>
+    <view class="personalCenter-menu">
+      <image class="personalCenter-menu-icon" src="/images/menu.png" onClick="changeSideBarVisible"/>
+    </view>
+    <card avatar="{{userInfo.avatar}}" contend="{{userInfo.contend}}" nickName="{{userInfo.username}}" daily="{{userInfo.daily}}" getMoreScoreInfo="{{getMoreScoreInfo}}"/>
+    <view class="personalCenter-task">
+      <view class="personalCenter-task-tag">
+        <image src="/images/task.png" />
+        <span >当前任务</span>
+      </view>
+      <view>
+        <task a:for="{{taskList}}" key="{{item.id}}" taskName="{{item.title}}" deadLine="{{item.endTime}}" taskNum="{{item.totalTask}}" type="{{item.type}}" finishedTaskNum="{{item.finishedTask}}" finishedPlayerNum="{{item.finishedPeople}}" id="{{item.groupId}}" task="{{getTaskMoreInfo}}"/>
+      </view>
+    </view>
+  </view>

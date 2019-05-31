@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "Input": "/components/input/index"
+  }
+}

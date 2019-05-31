@@ -21,7 +21,13 @@ require('../..//app');
 require('../../components/card/index');
 require('../../components/task/index');
 require('../../components/side-bar/index');
-require('../../pages/index/index');
+require('../../components/input/index');
+require('../../components/textarea/index');
+require('../../components/tab/index');
+require('../../components/form-button/index');
+require('../../components/modal/index');
+require('../../pages/personalCenter/index');
+require('../../pages/add/index');
 }
 self.bootstrapApp ? self.bootstrapApp({ success }) : success();
 }

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/* 字体设置 */
+/* 边框设置 */
+/* 宽高设置 */
+/*  flex相关  */
+/* 横向盒子 */
+/* 竖向盒子 */
+/* 水平居中盒子 */
+/* 垂直居中盒子 */
+/* 水平垂直居中盒子 */
+/*  设置头像大小、圆角等  */
+.tc-tab {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center; }
+  .tc-tab-item {
+    width: 192rpx;
+    height: 72rpx;
+    font-size: 32rpx;
+    color: #33270c;
+    border-width: 4rpx;
+    border-style: solid;
+    border-color: #ffc53d;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 36rpx;
+    line-height: 30rpx;
+    padding-top: 18rpx; }
+  .tc-tab-item-active {
+    background-color: #ffd470;
+    border-color: #33270c; }
+
+/*# sourceMappingURL=a.css.map */

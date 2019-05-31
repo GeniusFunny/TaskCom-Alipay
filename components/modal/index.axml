@@ -1,0 +1,9 @@
+<view class="tc-modal" hidden="{{hidden === undefined || hidden}}" onTap="modalClick">
+  <view class="tc-modal-body">
+    <view class="tc-modal-body-content">创建成功！</view>
+    <view class="tc-modal-body-options">
+      <button class="tc-modal-body-options-item tc-modal-body-options-item-font" open-type="share" id="share">分享到微信</button>
+      <button class="tc-modal-body-options-item tc-modal-body-options-item-font">关闭</button>
+    </view>
+  </view>
+</view>

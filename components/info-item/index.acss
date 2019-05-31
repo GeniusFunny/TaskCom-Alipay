@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* 字体设置 */
+/* 边框设置 */
+/* 宽高设置 */
+/*  flex相关  */
+/* 横向盒子 */
+/* 竖向盒子 */
+/* 水平居中盒子 */
+/* 垂直居中盒子 */
+/* 水平垂直居中盒子 */
+/*  设置头像大小、圆角等  */
+.tc-infoItem {
+  width: 690rpx;
+  height: 128rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 32rpx;
+  color: #33270c;
+  margin-bottom: 30rpx;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 6rpx;
+  background-color: #ffffff;
+  padding-left: 32rpx; }
+  .tc-infoItem-value {
+    position: absolute;
+    right: 62rpx; }
+
+/*# sourceMappingURL=a.css.map */

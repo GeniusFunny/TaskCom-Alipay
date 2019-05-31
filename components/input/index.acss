@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/* 字体设置 */
+/* 边框设置 */
+/* 宽高设置 */
+/*  flex相关  */
+/* 横向盒子 */
+/* 竖向盒子 */
+/* 水平居中盒子 */
+/* 垂直居中盒子 */
+/* 水平垂直居中盒子 */
+/*  设置头像大小、圆角等  */
+.tc-input {
+  width: 690rpx;
+  height: 128rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 21rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 6rpx; }
+  .tc-input label {
+    font-size: 32rpx;
+    color: #33270c;
+    padding-left: 31rpx; }
+  .tc-input input {
+    font-size: 32rpx;
+    color: #997625;
+    padding-right: 31rpx;
+    text-align: right;
+    position: absolute;
+    right: 31rpx; }
+  .tc-input picker {
+    font-size: 32rpx;
+    color: #997625;
+    padding-right: 31rpx;
+    position: absolute;
+    right: 31rpx; }
+
+/*# sourceMappingURL=a.css.map */

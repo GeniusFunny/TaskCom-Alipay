@@ -1,0 +1,16 @@
+<view class="tc-avatarList" onClick="avatarClick">
+    <view class="tc-avatarList-title">参与人员</view>
+    <view class="tc-avatarList-body">
+      <view class="tc-avatarList-body-item"
+        a:for="{{avatarList}}"
+        key="{{index}}"
+      >
+        <img
+          src="{{item.avatar}}"
+          id="{{item.userId}}"
+          class="{{currentUser === item.userId? 'tc-avatarList-body-item-active' : ''}}"
+        />
+        <view class="tc-avatarList-body-item-name">{{item.username}}</view>
+      </view>
+    </view>
+  </view>

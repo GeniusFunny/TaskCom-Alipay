@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* 字体设置 */
+/* 边框设置 */
+/* 宽高设置 */
+/*  flex相关  */
+/* 横向盒子 */
+/* 竖向盒子 */
+/* 水平居中盒子 */
+/* 垂直居中盒子 */
+/* 水平垂直居中盒子 */
+/*  设置头像大小、圆角等  */
+.tc-avatarList {
+  width: 690rpx;
+  height: 210rpx;
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 6rpx;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  padding-top: 18rpx; }
+  .tc-avatarList-title {
+    font-size: 28rpx;
+    color: #33270c;
+    margin-bottom: 31rpx;
+    padding-left: 30rpx; }
+  .tc-avatarList-body {
+    overflow: scroll;
+    display: flex;
+    flex-flow: row nowrap; }
+    .tc-avatarList-body-item {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      margin-left: 31rpx; }
+      .tc-avatarList-body-item img {
+        box-sizing: border-box;
+        width: 88rpx;
+        height: 88rpx;
+        border-radius: 50%; }
+      .tc-avatarList-body-item-name {
+        font-size: 23rpx;
+        color: #33270c; }
+      .tc-avatarList-body-item-active {
+        border: 16rpx double #ffc53d; }
+
+/*# sourceMappingURL=a.css.map */

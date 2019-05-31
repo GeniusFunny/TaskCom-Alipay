@@ -1,0 +1,15 @@
+<view class="tc-taskList">
+    <view class="tc-taskList-tag">
+      <image src="/images/taskList.png"/>
+    </view>
+    <view class="tc-taskList-body">
+      <view class="tc-taskList-body-item" a:for="{{taskList}}" key="{{index}}">
+        <image
+          class="tc-taskList-body-item-tag"
+          src="/images/pending.png"
+          id="{{item.itemId}}"
+        />
+        <view class="tc-taskList-body-item-value">{{item.content}}</view>
+      </view>
+    </view>
+  </view>

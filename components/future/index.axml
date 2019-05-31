@@ -1,0 +1,13 @@
+<form report-submit="true" onSubmit="submit" id="{{id}}">
+    <button formType="submit">
+      <view
+        class="tc-task"
+        class="{{type === 'multiPlayer' ? 'tc-task-multiPlayer': ''}}"
+      >
+        <view class="tc-task-info-1">
+          <view class="tc-task-info-1-name">{{taskName}}</view>
+          <view class="tc-task-info-1-date">开始时间：{{startTime}}</view>
+        </view>
+      </view>
+    </button>
+  </form>

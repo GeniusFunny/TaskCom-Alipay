@@ -1,0 +1,55 @@
+@charset "UTF-8";
+.add {
+  width: 750rpx;
+  min-height: 1000rpx;
+  padding-bottom: 100rpx;
+  background-color: #ffc53d; }
+  .add-addTaskItem {
+    width: 690rpx;
+    height: 128rpx;
+    display: flex;
+    flex-flow: row nowrap;
+    box-sizing: border-box;
+    border-radius: 6rpx;
+    justify-content: center;
+    background-color: #ffd470;
+    margin-top: 21rpx;
+    margin-left: 30rpx; }
+    .add-addTaskItem img {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 72rpx;
+      height: 72rpx; }
+  .add-addTaskItem-info {
+    position: absolute;
+    margin-top: 13rpx;
+    right: 30rpx;
+    font-size: 24rpx;
+    color: #997625;
+    line-height: 24rpx; }
+    .add-addTaskItem-info-tag {
+      width: 26rpx;
+      height: 28rpx;
+      margin-bottom: -5rpx; }
+  .add-info-margin {
+    margin-bottom: 97rpx; }
+.tc-button {
+  width: 750rpx;
+  height: 112rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  bottom: 0;
+  align-items: center;
+  background-color: #ffffff; }
+  .tc-button img {
+    width: 690rpx;
+    height: 88rpx; }
+  .tc-button-info {
+    font-size: 32rpx;
+    color: #33270c;
+    position: absolute;
+    left: 325rpx; }
+
+/*# sourceMappingURL=a.css.map */

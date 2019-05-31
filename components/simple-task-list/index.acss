@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* 字体设置 */
+/* 边框设置 */
+/* 宽高设置 */
+/*  flex相关  */
+/* 横向盒子 */
+/* 竖向盒子 */
+/* 水平居中盒子 */
+/* 垂直居中盒子 */
+/* 水平垂直居中盒子 */
+/*  设置头像大小、圆角等  */
+.tc-taskList {
+  width: 690rpx;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 6rpx;
+  margin-bottom: 29rpx; }
+  .tc-taskList-tag img {
+    width: 136rpx;
+    height: 49rpx;
+    margin-top: 8rpx;
+    margin-left: -8rpx; }
+  .tc-taskList-body {
+    display: flex;
+    flex-flow: column nowrap;
+    padding-left: 36rpx;
+    padding-top: 35rpx;
+    padding-bottom: 29rpx; }
+    .tc-taskList-body-item {
+      display: flex;
+      flex-flow: row nowrap;
+      margin-bottom: 25rpx; }
+      .tc-taskList-body-item-tag {
+        width: 48rpx;
+        height: 48rpx;
+        margin-right: 28rpx;
+        margin-top: -5rpx; }
+      .tc-taskList-body-item-value {
+        font-size: 28rpx;
+        color: #33270c; }
+
+/*# sourceMappingURL=a.css.map */

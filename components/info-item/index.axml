@@ -1,0 +1,4 @@
+<view class="tc-infoItem">
+  <view>{{name}}</view>
+  <view class="tc-infoItem-value">{{value}}</view>
+</view>

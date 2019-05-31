@@ -1,0 +1,10 @@
+<view class="tc-tab" onTap="tabClick">
+    <view
+      class="tc-tab-item {{type === 'village' ? 'tc-tab-item-active' : ''}}"
+      id="village"
+    >任务村</view>
+    <view
+      class="tc-tab-item {{type === 'rank' ? 'tc-tab-item-active' : ''}}"
+      id="rank"
+    >排行榜</view>
+  </view>

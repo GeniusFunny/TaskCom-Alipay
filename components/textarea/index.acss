@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* 字体设置 */
+/* 边框设置 */
+/* 宽高设置 */
+/*  flex相关  */
+/* 横向盒子 */
+/* 竖向盒子 */
+/* 水平居中盒子 */
+/* 垂直居中盒子 */
+/* 水平垂直居中盒子 */
+/*  设置头像大小、圆角等  */
+.tc-textarea {
+  width: 690rpx;
+  height: 216rpx;
+  display: flex;
+  flex-flow: column nowrap;
+  box-sizing: border-box;
+  border-radius: 6rpx;
+  background-color: #ffffff;
+  margin-left: 30rpx;
+  margin-top: 21rpx; }
+  .tc-textarea label {
+    font-size: 32rpx;
+    color: #33270c;
+    line-height: 30rpx;
+    margin-top: 30rpx;
+    margin-bottom: 36rpx;
+    margin-left: 30rpx; }
+  .tc-textarea textarea {
+    font-size: 28rpx;
+    color: #997625;
+    width: 615rpx;
+    height: 76rpx;
+    margin-left: 45rpx; }
+  .tc-textarea img {
+    width: 50rpx;
+    height: 56rpx;
+    position: relative;
+    right: -665rpx;
+    top: -185rpx; }
+
+/*# sourceMappingURL=a.css.map */

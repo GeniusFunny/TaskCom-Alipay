@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+   "tc-input": "/components/input/index",
+   "tc-textarea": "/components/textarea/index",
+   "tab": "/components/tab/index",
+   "form-button": "/components/form-button/index",
+   "modal": "/components/modal/index"
+  }
+}

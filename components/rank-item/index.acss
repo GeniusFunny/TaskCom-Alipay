@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* 字体设置 */
+/* 边框设置 */
+/* 宽高设置 */
+/*  flex相关  */
+/* 横向盒子 */
+/* 竖向盒子 */
+/* 水平居中盒子 */
+/* 垂直居中盒子 */
+/* 水平垂直居中盒子 */
+/*  设置头像大小、圆角等  */
+.tc-rankItem-top3 {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 690rpx;
+  height: 176rpx;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+  background-color: #ffffff;
+  border-radius: 6rpx;
+  padding-right: 34rpx;
+  padding-left: 34rpx;
+  align-items: center; }
+  .tc-rankItem-top3-name {
+    width: 240rpx;
+    font-size: 32rpx;
+    color: #33270c;
+    margin-right: 10rpx; }
+  .tc-rankItem-top3-score {
+    font-size: 48rpx;
+    color: #33270c;
+    position: absolute;
+    right: 64rpx; }
+  .tc-rankItem-top3-avatar {
+    width: 120rpx;
+    height: 120rpx;
+    margin-right: 15rpx;
+    border-radius: 50%; }
+  .tc-rankItem-top3-tag {
+    width: 48rpx;
+    height: 54rpx;
+    margin-right: 28rpx; }
+
+/*# sourceMappingURL=a.css.map */

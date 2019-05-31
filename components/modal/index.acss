@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/* 字体设置 */
+/* 边框设置 */
+/* 宽高设置 */
+/*  flex相关  */
+/* 横向盒子 */
+/* 竖向盒子 */
+/* 水平居中盒子 */
+/* 垂直居中盒子 */
+/* 水平垂直居中盒子 */
+/*  设置头像大小、圆角等  */
+.tc-modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .tc-modal-body {
+    width: 540rpx;
+    height: 256rpx;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    position: absolute;
+    top: 417rpx;
+    left: 105rpx;
+    box-sizing: border-box;
+    border-radius: 20rpx;
+    background-color: #ffffff; }
+    .tc-modal-body-content {
+      font-size: 36rpx;
+      color: #333333;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      height: 167rpx;
+      align-items: center;
+      justify-content: center; }
+    .tc-modal-body-options {
+      display: flex;
+      flex-flow: row nowrap;
+      font-size: 32rpx;
+      color: #ffd470;
+      width: 540rpx;
+      height: 88rpx;
+      box-sizing: border-box;
+      border-top: 2rpx solid #e6e6e6; }
+      .tc-modal-body-options-item {
+        width: 270rpx;
+        height: 88rpx;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center; }
+      .tc-modal-body-options-item-font {
+        box-sizing: border-box;
+        font-size: 32rpx;
+        color: #ffd470;
+        background-color: #ffffff; }
+      .tc-modal-body-options-item:after {
+        border: none; }
+      .tc-modal-body-options-item-font:first-child {
+        border-right: 2rpx solid #e6e6e6;
+        border-bottom-right-radius: 0rpx;
+        border-top-right-radius: 0rpx; }
+
+/*# sourceMappingURL=a.css.map */

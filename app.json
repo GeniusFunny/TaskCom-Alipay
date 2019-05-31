@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/personalCenter/index",
+    "pages/add/index"
   ],
   "window": {
     "defaultTitle": "TaskCom",
@@ -14,9 +15,21 @@
     "items":[
       {
         "name": "我的",
-        "pagePath": "pages/index/index",
-        "icon": "/assets/images/1st.png",
-        "activeIcon": "/assets/images/m2.png"
+        "pagePath": "pages/personalCenter/index",
+        "icon": "images/me1.png",
+        "activeIcon": "images/me2.png"
+      },
+      {
+        "name": "新建任务",
+        "pagePath": "pages/add/index",
+        "icon": "images/add1.png",
+        "activeIcon": "images/add2.png"
+      },
+      {
+        "name": "发现",
+        "pagePath": "pages/personalCenter/index",
+        "icon": "images/find1.png",
+        "activeIcon": "images/find2.png"
       }
     ]
   }

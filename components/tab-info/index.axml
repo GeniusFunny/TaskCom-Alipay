@@ -1,0 +1,5 @@
+<view>
+  <Input type="{{taskName}}">任务名称</Input>
+  <Input type="{{days}}">任务坚持天数</Input>
+  <Input type="{{players}}">参与人数</Input>
+</view>

@@ -1,0 +1,6 @@
+<view class="tc-tab" onTap="tabClick">
+  <view class="tc-tab-item {{type === 'daily' ? 'tc-tab-item-active' : ''}}" id="daily">单人
+  </view>
+  <view class="tc-tab-item {{type === 'multiplayer' ? 'tc-tab-item-active' : ''}}" id="multiplayer">多人
+  </view>
+</view>

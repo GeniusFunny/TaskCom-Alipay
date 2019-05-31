@@ -1,0 +1,6 @@
+<view class="tc-rankItem-top3">
+    <img class="tc-rankItem-top3-tag" src="{{tagList[position]}}"/>
+    <img class="tc-rankItem-top3-avatar" src="{{avatar}}"/>
+    <view class="tc-rankItem-top3-name">{{username}}</view>
+    <view class="tc-rankItem-top3-score">{{score}}</view>
+  </view>

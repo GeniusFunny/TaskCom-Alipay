@@ -1,0 +1,29 @@
+<view>
+  <view class="add">
+    <tab type="{{info.type}}" changeTaskType="{{changeTaskType}}"/>
+    <view>
+      <tc-input info="{{info.taskName}}" changeTaskName="changeTaskName"/>
+      <tc-textarea a:for="{{info.taskList}}" info="{{item}}" key="{{item.id}}" index="{{index}}" changeTaskItemContent="{{changeTaskItemContent}}" deleteTaskItem="{{deleteTaskItem}}"/>
+      <view class="add-addTaskItem">
+        <img src="/images/addButton.png" onTap="{{addSubTask}}" id="img"/>
+      </view>
+      <view class="add-addTaskItem-info">
+          添加任务项，获得多倍积分, 完成后次日到账
+        <img class="add-addTaskItem-info-tag" src="/images/jifen.png"/>
+      </view>
+      <view class="add-info-margin"></view>
+      <tc-input info="{{info.startDate}}" changeStartDate="{{changeStartDate}}"/>
+      <tc-input info="{{info.endDate}}" changeEndDate="{{changeEndDate}}"/>
+      <tc-input info="{{info.startTime}}" changeStartTime="{{changeStartTime}}"/>
+      <tc-input info="{{info.endTime}}" changeEndTime="{{changeEndTime}}"/>
+    </view>
+    <view v-if="{{info.type === 'multiplayer'}}">
+      <tc-input info="{{info.players}}" changePlayerNum="{{changePlayerNum}}"/>
+      <tc-input info="{{info.public}}" changeIsPublic="{{changeIsPublic}}"/>
+    </view>
+  </view>
+  <view style="padding-top: 15rpx; padding-bottom: 15rpx;">
+    <form-button getFormId="{{getFormId}}" buttonContent="{{buttonContent}}" active="{{canClick}}"/>
+  </view>
+  <modal onShareTask="shareTask" hidden="{{hidden}}"/>
+</view>

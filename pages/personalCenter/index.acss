@@ -1,0 +1,40 @@
+/* required by usingComponents */
+@charset "UTF-8";
+/* 字体设置 */
+/* 边框设置 */
+/* 宽高设置 */
+/*  flex相关  */
+/* 横向盒子 */
+/* 竖向盒子 */
+/* 水平居中盒子 */
+/* 垂直居中盒子 */
+/* 水平垂直居中盒子 */
+/*  设置头像大小、圆角等  */
+.personalCenter {
+  min-height: 100vh;
+  background-color: #ffc53d;
+  padding-left: 30rpx;
+  padding-right: 30rpx; }
+  .personalCenter-menu-icon {
+    margin-bottom: 27rpx;
+    margin-top: 35rpx;
+    width: 60rpx;
+    height: 60rpx; }
+  .personalCenter-task {
+    margin-top: 52rpx;
+    padding-bottom: 30rpx; }
+    .personalCenter-task-tag {
+      font-size: 32rpx;
+      color: #997625;
+      margin-bottom: 25rpx;
+      margin-left: -8rpx;
+      line-height: 31rpx;
+      vertical-align: middle; }
+      .personalCenter-task-tag image {
+        width: 50rpx;
+        height: 50rpx;
+        vertical-align: text-bottom;
+        margin-right: 5rpx;
+        margin-bottom: -3rpx; }
+
+/*# sourceMappingURL=index.css.map */

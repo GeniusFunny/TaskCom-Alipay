@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* 字体设置 */
+/* 边框设置 */
+/* 宽高设置 */
+/*  flex相关  */
+/* 横向盒子 */
+/* 竖向盒子 */
+/* 水平居中盒子 */
+/* 垂直居中盒子 */
+/* 水平垂直居中盒子 */
+/*  设置头像大小、圆角等  */
+.tc-button {
+  width: 750rpx;
+  height: 112rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  bottom: 0;
+  align-items: center;
+  background-color: #ffffff; }
+  .tc-button img {
+    width: 690rpx;
+    height: 88rpx; }
+  .tc-button-info {
+    font-size: 32rpx;
+    color: #33270c;
+    position: absolute;
+    left: 325rpx; }
+
+/*# sourceMappingURL=a.css.map */

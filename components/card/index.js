@@ -2,7 +2,7 @@ Component ({
   mixins: [],
   data: {},
   props: {
-    avatar: '/assets/images/avatar.jpeg',
+    avatar: '/images/avatar.jpeg',
     contend: '20',
     nickName: '杨航',
     daily: '10'
