@@ -7,7 +7,7 @@ Component({
   },
   method: {
     submit(e) {
-      this.$emit('task', e.currentTarget.id, e.target.formId)
+      this.props.onTask(e.currentTarget.id, e.target.formId)
     }
   }
 })

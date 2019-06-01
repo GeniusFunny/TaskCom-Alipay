@@ -28,9 +28,9 @@
         <view>
             出生年月
         </view>
-        <picker mode="date" value="{{info.birthday}}" start="1990-01-01" end="2018-12-31" onChange="onBindBirthdayChange">
+        <picker mode="date" value="{{info.birthday}}" start="1990-01-01" end="2019-12-31" onChange="onBindBirthdayChange">
           <view class="editInfo-normalItem-value">
-              {{info.birthday}}
+              {{info.birthday || '未设置'}}
           </view>
         </picker>
       </view>
@@ -53,7 +53,9 @@
             年级
         </view>
         <picker class="editInfo-normalItem-value" value="{{info.grade}}" range="{{infoOptions.gradeData}}" onChange="onBindGradeChange">
+          <view class="editInfo-normalItem-value">
             {{infoOptions.gradeData[info.grade] || '未设置'}}
+          </view>
         </picker>
       </view>
     </view>

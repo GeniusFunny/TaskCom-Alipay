@@ -1,18 +1,18 @@
 <view class="tc-input">
     <label>{{info.name}}</label>
     <input
-      v-if="{{info.type === 'input'}}"
+      a:if="{{info.type === 'input'}}"
       value="{{info.value}}"
       placeholder="请输入"
       onInput="changeInput"
     />
-    <picker v-if="{{info.type === 'picker'}}" value="{{info.value}}" range="{{info.data}}" id="{{info.id}}" onChange="{{changeValue}}">
+    <picker a:if="{{info.type === 'picker'}}" value="{{info.value}}" range="{{info.data}}" id="{{info.id}}" onChange="changeValue">
      {{info.data[info.value]}}
     </picker>
-    <picker v-if="{{info.type === 'date'}}" value="{{info.value}}" placeholder="请设置" mode="date" start="{{info.start}}" end="{{info.end}}" id="{{info.id}}" onChange="{{changeDate}}">
+    <picker a:if="{{info.type === 'date'}}" value="{{info.value}}" placeholder="请设置" mode="date" start="{{info.start}}" end="{{info.end}}" id="{{info.id}}" onChange="changeDate">
       {{info.value}}
     </picker>
-    <picker v-if="{{info.type === 'time'}}" value="{{info.value}}" placeholder="请设置" mode="time" start="{{info.start}}" end="{{info.end}}" id="{{info.id}}" onChange="{{changeTime}}">
+    <picker a:if="{{info.type === 'time'}}" value="{{info.value}}" placeholder="请设置" mode="time" start="{{info.start}}" end="{{info.end}}" id="{{info.id}}" onChange="changeTime">
       {{info.value}}
     </picker>
   </view>

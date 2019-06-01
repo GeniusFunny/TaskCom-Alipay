@@ -1,34 +1,31 @@
 Component({
   props: {
-    info: {
-      type: {}
-    }
+    info: {}
   },
   methods: {
     changeDate(e) {
       if (e.target.id === 'startDate') {
-        this.$emit('changeStartDate', e.target.value)
+        this.props.onChangeStartDate(e.target.value)
       } else if (e.target.id === 'endDate') {
-        this.$emit('changeEndDate', e.target.value)
+        this.props.onChangeEndDate(e.target.value)
       }
     },
     changeTime(e) {
       if (e.target.id === 'startTime') {
-        this.$emit('changeStartTime', e.target.value)
+        this.props.onChangeStartTime(e.target.value)
       } else if (e.target.id === 'endTime') {
-        this.$emit('changeEndTime', e.target.value)
+        this.props.onChangeEndTime(e.target.value)
       }
     },
     changeValue(e) {
-      console.log(e)
       if (e.target.id === 'players') {
-        this.$emit('changePlayerNum', e.target.value)
+        this.props.onChangePlayerNum(e.target.value)
       } else if (e.target.id === 'isPublic') {
-        this.$emit('changeIsPublic', e.target.value)
+        this.props.onChangeIsPublic(e.target.value)
       }
     },
     changeInput(e) {
-      this.$emit('changeTaskName', e.target.value)
+      this.props.onChangeTaskName(e.target.value)
     }
   }
 })

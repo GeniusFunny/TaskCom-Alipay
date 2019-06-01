@@ -5,12 +5,12 @@ import { normalizeTime, cst2unix } from '../../utils/utils'
 Page({
   data: {
     info: {
-      gender: 0,
-      birthday: '未设置',
-      location: '未设置',
-      grade: '未设置',
-      collage: '未设置',
-      username: '未设置',
+      gender: '',
+      birthday: '',
+      location: '',
+      grade: '',
+      collage: '',
+      username: '',
       avatar: '/images/avatar.jpeg'
     },
     images: {
@@ -92,36 +92,48 @@ Page({
   onBindBirthdayChange(e) {
     const { info } = this.data
     this.setData({
-      ...info,
-      birthday: e.target.value
+      info: {
+        ...info,
+        birthday: e.detail.value
+      }
     })
   },
   onBindUsernameChange(e) {
+    console.log(e)
     const { info } = this.data
+  
     this.setData({
-      ...info,
-      username: e.target.value
+      info: {
+        ...info,
+        username: e.detail.value
+      }
     })
   },
   onBindLocationChange(e) {
     const { info } = this.data
     this.setData({
-      ...info,
-      location: e.target.value
+      info: {
+        ...info,
+        location: e.detail.value
+      }
     })
   },
   onBindGradeChange(e) {
     const { info } = this.data
     this.setData({
-      ...info,
-      grade: e.target.value
+      info: {
+        ...info,
+        grade: e.detail.value
+      }
     })
   },
   onBindCollageChange(e) {
     const { info } = this.data
     this.setData({
-      ...info,
-      collage: e.target.value
+      info: {
+        ...info,
+        collage: e.detail.value
+      }
     })
   },
   bindClickSubmit() {
@@ -147,5 +159,8 @@ Page({
         console.log(err)
         toast('用不要使用非法字符', 'none')
       })
+  },
+  onShow() {
+    console.log(this.data.infoOptions.gradeData[this.data.info.grade])
   }
 })
