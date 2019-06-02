@@ -37,14 +37,16 @@ Page({
   onLoad() {
     // Todo： 查询小程序API并修改
     if (this.$root.$mp.query.hasOwnProperty('type')) {
-      this.type = this.$root.$mp.query.type
+      this.setData({
+        type: this.$root.$mp.query.type
+      })
     }
     showLoading()
     this.getScoreHistory()
     setTimeout(() => {
       hideLoading()
     }, 1000)
-  }
+  },
   onUnload() {
     this.setData({
       type: 0,

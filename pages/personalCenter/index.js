@@ -100,9 +100,6 @@ Page({
     //     console.log(err)
     //   })
   },
-  onReady() {
-    // 页面加载完成
-  },
   onShow() {
     // GetUserInfo()
     //   .then(res => {
@@ -113,15 +110,6 @@ Page({
     //     this.parseTaskList(res.data.groups)
     //   })
     // 页面显示
-  },
-  onHide() {
-    // 页面隐藏
-  },
-  onUnload() {
-    // 页面被关闭
-  },
-  onTitleClick() {
-    // 标题被点击
   },
   onPullDownRefresh() {
     GetUserInfo()
