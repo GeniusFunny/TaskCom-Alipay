@@ -1,4 +1,4 @@
-import { showLoading, getStorage, hideLoading, modal, toast, jumpTo } from '../../utils/aliUtils'
+import { showLoading, getStorage, hideLoading, modal, toast, jumpTo } from '../../utils/myUtils'
 import { GetTaskInfo, FinishTaskItem, GetOthersTaskInfo } from '../../api/API'
 import { normalizeTimeHours } from '../../utils/utils'
 
@@ -111,7 +111,7 @@ Page({
         hideLoading()
       })
   },
-  changeCurrentUserTaskInfo(key) {
+  onChangeCurrentUserTaskInfo(key) {
     const { info } = this.data
     const { groupId } = info
     showLoading()

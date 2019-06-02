@@ -6,7 +6,7 @@ Component({
   },
   methods: {
     tabClick(e) {
-      this.$emit('changeTab', e.target.id)
+      this.props.onChangeTab(e.target.id)
     }
   }
 })

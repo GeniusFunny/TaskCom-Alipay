@@ -34,6 +34,7 @@
       margin-bottom: -5rpx; }
   .add-info-margin {
     margin-bottom: 97rpx; }
+    
 .tc-button {
   width: 750rpx;
   height: 112rpx;

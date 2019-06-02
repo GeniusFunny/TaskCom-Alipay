@@ -1,4 +1,4 @@
-import { toast, jumpTo, showLoading, hideLoading, modal } from '../../utils/aliUtils'
+import { toast, jumpTo, showLoading, hideLoading, modal } from '../../utils/myUtils'
 import { unix2cst, cst2unix } from '../../utils/utils'
 import { CreateNewTask, SubmitForm } from '../../api/API'
 
@@ -71,7 +71,7 @@ Page({
     buttonContent: '新建任务',
     canClick: true
   },
-  changeTaskType(type) {
+  onChangeTaskType(type) {
     const { info } = this.data
     this.setData({
       info: {
@@ -108,7 +108,7 @@ Page({
   },
   getTaskInfo() {
     const { info, taskInfo } = this.data
-    const { taskName, startDate, startTime, endDate, endTime, public, taskList, type, players } = info
+    const { taskName, startDate, startTime, endDate, endTime, open, taskList, type, players } = info
     try {
       this.setData({
         taskInfo: {
@@ -116,7 +116,7 @@ Page({
           title: taskName.value,
           startTime: cst2unix(`${startDate.value}'T'${startTime.value}:00`),
           endTime: cst2unix(`${endDate.value}'T'${endTime.value}:00`),
-          isPublic: public.value === '1',
+          isPublic: open.value === '1',
           maxPeople: 1,
           items: taskList.map(item => ({
             content: item.value
@@ -140,14 +140,14 @@ Page({
   },
   clearTask() {
     const { info} = this.data
-    const { taskName, public } = info
+    const { taskName, open } = info
 
     this.setData({
       taskInfo: {},
       info: {
         ...info,
-        public: {
-          ...public,
+        open: {
+          ...open,
           value: 0,
         },
         taskName: {
@@ -163,7 +163,7 @@ Page({
   submitTask() {
     showLoading('提交中')
     const { info, taskInfo, formId } = this.data
-    const { taskName, public } = info
+    const { taskName, open } = info
     const { type } = taskInfo
     this.setData({
       canClick: false
@@ -212,7 +212,7 @@ Page({
       toast('请填写相关信息', 'none')
     }
   },
-  shareTask(key) {
+  onShareTask(key) {
     if (key !== 'share') {
       this.clearTask()
       this.setData({
@@ -221,7 +221,7 @@ Page({
       jumpTo('../personalCenter/personalCenter')
     }
   },
-  getFormId(key) {
+  onGetFormId(key) {
     this.setData({
       formId: key
     })
@@ -248,7 +248,7 @@ Page({
       }
     })
   },
-  changeStartDate(value) {
+  onChangeStartDate(value) {
     const { info } = this.data
     const { startDate, endDate } = info
     this.setData({
@@ -267,7 +267,7 @@ Page({
       }
     })
   },
-  changeEndDate(value) {
+  onChangeEndDate(value) {
     this.setData({
       info: {
         ...info,
@@ -295,7 +295,7 @@ Page({
       }
     })
   },
-  changeStartTime(value) {
+  onChangeStartTime(value) {
     const { info } = this.data
     const { startTime, endTime } = info
     this.setData({
@@ -323,7 +323,7 @@ Page({
       })
     }
   },
-  changeEndTime(value) {
+  onChangeEndTime(value) {
     const { info } = this.data
     const { startTime, endTime } = info
     this.setData({
@@ -340,7 +340,7 @@ Page({
       }
     })
   },
-  changeTaskName(value) {
+  onChangeTaskName(value) {
     const { info } = this.data
     const { taskName } = info
     this.setData({
@@ -353,7 +353,7 @@ Page({
       }
     })
   },
-  deleteTaskItem(key) {
+  onDeleteTaskItem(key) {
     const { info } = this.data
     const { taskList } = info
     this.setData({
@@ -363,7 +363,7 @@ Page({
       }
     })
   },
-  changeTaskItemContent(key, value) {
+  onChangeTaskItemContent(key, value) {
     const { info } = this.data
     const { taskList } = info
     let index = this.findTask(key)
@@ -387,20 +387,20 @@ Page({
     })
     return itemIndex
   },
-  changeIsPublic(value) {
+  onChangeIsPublic(value) {
     const { info } = this.data
-    const { public } = info
+    const { open } = info
     this.setData({
       info: {
         ...info,
-        public: {
-          ...public,
+        open: {
+          ...open,
           value
         }
       }
     })
   },
-  changePlayerNum(value) {
+  onChangePlayerNum(value) {
     const { info } = this.data
     const { players } = info
     this.setData({
@@ -412,6 +412,10 @@ Page({
         }
       }
     })
+  },
+  onLoad() {
+    this.initDate()
+    this.initTime()
   },
   onShareAppMessage() {
     // 返回自定义分享信息

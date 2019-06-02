@@ -11,7 +11,7 @@ Component({
   },
   methods: {
     submit (e) {
-      console.log(e)
+      this.props.onTask(e.currentTarget.id, e.target.formId)
     }
   }
 })

@@ -1,5 +1,5 @@
 import Route from './mock/route'
-import {getStorage, setStorage} from '../utils/aliUtils'
+import {getStorage, setStorage} from '../utils/myUtils'
 import {parseToken} from '../utils/utils'
 
 const BASEURL = 'https://hotpot.zhengsj.top'

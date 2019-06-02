@@ -1,14 +1,14 @@
 require('@alipay/appx-compiler/lib/sjsEnvInit');
 require('./config$');
 
-require('../../components/card/index');
-require('../../components/task/index');
-require('../../components/side-bar/index');
 require('../../components/input/index');
 require('../../components/textarea/index');
 require('../../components/tab/index');
 require('../../components/form-button/index');
 require('../../components/modal/index');
+require('../../components/card/index');
+require('../../components/task/index');
+require('../../components/side-bar/index');
 require('../../components/rank-item/index');
 require('../../components/info-item/index');
 require('../../components/task-list/index');
@@ -16,9 +16,9 @@ require('../../components/avatar-list/index');
 require('../../components/history/index');
 require('../../components/score-history-item/index');
 require('../../components/future/index');
+require('../../pages/add/index');
 require('../../pages/personalCenter/index');
 require('../../pages/editInfo/index');
-require('../../pages/add/index');
 require('../../pages/find/index');
 require('../../pages/task/index');
 require('../../pages/simpleTask/index');

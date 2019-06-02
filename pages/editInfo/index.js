@@ -1,5 +1,5 @@
 import { GetUserInfo, UpdateUserInfo } from '../../api/API'
-import { getStorage, toast, jumpTo } from '../../utils/aliUtils'
+import { getStorage, toast, jumpTo } from '../../utils/myUtils'
 import { normalizeTime, cst2unix } from '../../utils/utils'
 
 Page({

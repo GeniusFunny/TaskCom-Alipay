@@ -8,7 +8,7 @@ Component({
   },
   methods: {
     tabClick(e) {
-      this.$emit('changeTaskType', e.target.id)
+      this.props.onChangeTaskType(e.target.id)
     }
   }
 })

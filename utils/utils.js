@@ -1,5 +1,5 @@
 import { b64utoutf8 } from 'jsrsasign'
-import {setStorage} from './aliUtils'
+import {setStorage} from './myUtils'
 
 /*  函数节流  */
 function throttle (fn, delay) {

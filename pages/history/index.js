@@ -1,6 +1,6 @@
 import { GetHistory, SubmitForm } from '../../api/API'
 import { normalizeTimeHours } from '../../utils/utils'
-import { showLoading, hideLoading, setStorage, jumpTo } from '../../utils/aliUtils'
+import { showLoading, hideLoading, setStorage, jumpTo } from '../../utils/myUtils'
 
 
 
@@ -37,7 +37,7 @@ Page({
       type: item.type === 1 ? 'daily' : 'multiPlayer'
     }))
   },
-  getTaskMoreInfo(key, formId) {
+  onGetTaskMoreInfo(key, formId) {
     SubmitForm({ formId: formId, type: 1 })
     setStorage('currentTaskId', parseInt(key))
     setStorage('state', 'history')

@@ -7,6 +7,6 @@
     <avatar-list a:if="{{info.isPublic}}" avatarList="{{info.avatarList}}"/>
   </view>
   <view a:if="{{share !== undefined && share}}" class="tc-button">
-    <form-button button-content="{{buttonContent}}" getFormId="{{getFormId}}" active="{{canClick}}"/>
+    <form-button buttonContent="{{buttonContent}}" onGetFormId="onGetFormId" active="{{canClick}}"/>
   </view>
 </view>

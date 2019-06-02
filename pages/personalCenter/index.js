@@ -1,5 +1,5 @@
 import { GetUserInfo, GetCurrentTask, GetScore, SubmitForm } from '../../api/API'
-import { setStorage, jumpTo, showLoading, hideLoading } from '../../utils/aliUtils'
+import { setStorage, jumpTo, showLoading, hideLoading } from '../../utils/myUtils'
 import { normalizeTimeHours } from '../../utils/utils'
 
 
@@ -62,7 +62,7 @@ Page({
         this.parseTaskList(res.data.groups)
       })
   },
-  getTaskMoreInfo(key, formId) {
+  onGetTaskMoreInfo(key, formId) {
     setStorage('state', 'now')
     SubmitForm({ formId: formId, type: 1 })
     setStorage('currentTaskId', parseInt(key))

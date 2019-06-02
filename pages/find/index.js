@@ -1,5 +1,5 @@
 import { GetRank, GetTaskVillage } from '../../api/API'
-import { showLoading, hideLoading, jumpTo } from '../../utils/aliUtils'
+import { showLoading, hideLoading, jumpTo } from '../../utils/myUtils'
 
 Page({
   data: {
@@ -20,7 +20,7 @@ Page({
       refresh: false
     }
   },
-  changeTab(type) {
+  onChangeTab(type) {
     const { info } = this.data
     this.setData({
       info: {
@@ -30,8 +30,7 @@ Page({
     })
   },
   getRank(page = 1) {
-    const { rankPage, rankList  = this.data
-
+    const { rankPage, rankList}  = this.data
     GetRank(page)
       .then(res => {
         this.setData({

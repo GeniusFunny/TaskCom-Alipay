@@ -1,4 +1,4 @@
-import { showLoading, getStorage, hideLoading, toast, modal, jumpTo } from '../../utils/aliUtils'
+import { showLoading, getStorage, hideLoading, toast, modal, jumpTo } from '../../utils/myUtils'
 import { GetSimpleTaskInfo, JoinTaskGroup, SubmitForm } from '../../api/API'
 import { normalizeTimeHours } from '../../utils/utils'
 
@@ -146,7 +146,7 @@ Page({
         }
       })
   },
-  getFormId(key) {
+  onGetFormId(key) {
     this.setData({
       formId: key,
     })

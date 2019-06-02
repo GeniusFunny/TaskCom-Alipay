@@ -5,10 +5,10 @@ Component({
   },
   methods: {
     changeTextarea(e) {
-      this.$emit('changeTaskItemContent', e.target.id, e.target.value)
+      this.props.onChangeTaskItemContent(e.target.id, e.target.value)
     },
     deleteTexterea(e) {
-      this.$emit('deleteTaskItem', parseInt(e.target.id))
+      this.props.onDeleteTaskItem(parseInt(e.target.id))
     }
   }
 })

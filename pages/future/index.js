@@ -1,8 +1,8 @@
 import { GetFutureTaskList, SubmitForm } from '../../api/API'
 import { normalizeTimeHours } from '../../utils/utils'
-import { setStorage, jumpTo } from '../../utils/aliUtils'
+import { setStorage, jumpTo } from '../../utils/myUtils'
 
-age({
+Page({
   data: {
     taskList: []
   },

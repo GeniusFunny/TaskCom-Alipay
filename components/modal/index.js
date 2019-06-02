@@ -7,9 +7,9 @@ Component({
     modalClick(e) {
       if (e.target.id === '') {
         this.hidden = true
-        this.$emit('shareTask', 'close')
+        this.props.onShareTask('close')
       } else {
-        this.$emit('shareTask', e.target.id)
+        this.props.onShareTask(e.target.id)
       }
     }
   }

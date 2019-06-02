@@ -1,5 +1,5 @@
 import { GetScoreHistory } from '../../api/API'
-import { showLoading, hideLoading } from '../../utils/aliUtils'
+import { showLoading, hideLoading } from '../../utils/myUtils'
 import { normalizeTime } from '../../utils/utils'
 
 Page({

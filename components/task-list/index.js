@@ -19,8 +19,14 @@ Component({
   methods: {
     optionClick(e) {
       if (e.target.id || e.target.id === 0) {
-        this.$emit('changeTaskState', e.target.id)
+        this.props.onChangeTaskState(e.target.id)
       }
+    },
+    changeTextarea(e) {
+      this.props.onChangeTaskItemContent(e.target.id, e.target.value)
+    },
+    deleteTexterea(e) {
+      this.props.onDeleteTaskItem(parseInt(e.target.id))
     }
   }
 })

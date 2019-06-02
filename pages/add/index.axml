@@ -1,29 +1,29 @@
 <view>
   <view class="add">
-    <tab type="{{info.type}}" changeTaskType="{{changeTaskType}}"/>
+    <tab type="{{info.type}}" onChangeTaskType="onChangeTaskType"/>
     <view>
-      <tc-input info="{{info.taskName}}" changeTaskName="changeTaskName"/>
-      <tc-textarea a:for="{{info.taskList}}" info="{{item}}" key="{{item.id}}" index="{{index}}" changeTaskItemContent="{{changeTaskItemContent}}" deleteTaskItem="{{deleteTaskItem}}"/>
+      <tc-input info="{{info.taskName}}" onChangeTaskName="onChangeTaskName"/>
+      <tc-textarea a:for="{{info.taskList}}" info="{{item}}" key="{{item.id}}" index="{{index}}" onChangeTaskItemContent="onChangeTaskItemContent" onDeleteTaskItem="onDeleteTaskItem"/>
       <view class="add-addTaskItem">
-        <image src="/images/addButton.png" onTap="{{addSubTask}}" id="image"/>
+        <image src="/images/addButton.png" onTap="addSubTask" id="image"/>
       </view>
       <view class="add-addTaskItem-info">
           添加任务项，获得多倍积分, 完成后次日到账
         <image class="add-addTaskItem-info-tag" src="/images/jifen.png"/>
       </view>
       <view class="add-info-margin"></view>
-      <tc-input info="{{info.startDate}}" changeStartDate="{{changeStartDate}}"/>
-      <tc-input info="{{info.endDate}}" changeEndDate="{{changeEndDate}}"/>
-      <tc-input info="{{info.startTime}}" changeStartTime="{{changeStartTime}}"/>
-      <tc-input info="{{info.endTime}}" changeEndTime="{{changeEndTime}}"/>
+      <tc-input info="{{info.startDate}}" onChangeStartDate="onChangeStartDate"/>
+      <tc-input info="{{info.endDate}}" onChangeEndDate="onChangeEndDate"/>
+      <tc-input info="{{info.startTime}}" onChangeStartTime="onChangeStartTime"/>
+      <tc-input info="{{info.endTime}}" onChangeEndTime="onChangeEndTime"/>
     </view>
-    <view v-if="{{info.type === 'multiplayer'}}">
-      <tc-input info="{{info.players}}" changePlayerNum="{{changePlayerNum}}"/>
-      <tc-input info="{{info.public}}" changeIsPublic="{{changeIsPublic}}"/>
+    <view a:if="{{info.type === 'multiplayer'}}">
+      <tc-input info="{{info.players}}" onChangePlayerNum="onChangePlayerNum"/>
+      <tc-input info="{{info.public}}" onChangeIsPublic="onChangeIsPublic"/>
     </view>
   </view>
-  <view style="padding-top: 15rpx; padding-bottom: 15rpx;">
-    <form-button getFormId="{{getFormId}}" buttonContent="{{buttonContent}}" active="{{canClick}}"/>
+  <view style="padding-top: 15rpx; padding-bottom: 15rpx;" class="tc-button">
+    <form-button onGetFormId="onGetFormId" buttonContent="{{buttonContent}}" active="{{canClick}}"/>
   </view>
-  <modal onShareTask="shareTask" hidden="{{hidden}}"/>
+  <modal onShareTask="onShareTask" hidden="{{hidden}}"/>
 </view>
