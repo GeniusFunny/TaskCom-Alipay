@@ -8,10 +8,10 @@ Page({
   data: {
     taskList: [],
     page: 1,
-    pageSum:1
+    pageSum: 1
   },
   getHistory() {
-    const { pageSum, page } = this.data
+    const { pageSum, page, taskList } = this.data
     if (typeof pageSum === 'undefined' || page <= pageSum) {
       showLoading()
       GetHistory(page)
@@ -42,5 +42,17 @@ Page({
     setStorage('currentTaskId', parseInt(key))
     setStorage('state', 'history')
     jumpTo(`../simpleTask/simpleTask`)
+  },
+  onReachBottom() {
+    this.getHistory()
+  },
+  onPullDownRefresh() {
+    this.getHistory()
+    setTimeout(() => {
+      my.stopPullDownRefresh()
+    }, 1000)
+  },
+  onLoad() {
+    this.getHistory()
   }
 })

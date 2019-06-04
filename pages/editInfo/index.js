@@ -160,7 +160,7 @@ Page({
         toast('用不要使用非法字符', 'none')
       })
   },
-  onShow() {
-    console.log(this.data.infoOptions.gradeData[this.data.info.grade])
-  }
+  onLoad() {
+    this.getInfo()
+  },
 })

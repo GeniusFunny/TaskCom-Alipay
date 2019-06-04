@@ -17,5 +17,9 @@ Component({
     submit(e) {
       this.props.onTask(e.currentTarget.id, e.target.formId)
     }
+  },
+  didMount() {
+    console.log('????')
+    console.log(this.props)
   }
 })

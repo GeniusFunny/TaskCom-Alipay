@@ -2,7 +2,7 @@
   <view class="history-task">
     <view>
       <view a:if="{{taskList !== undefined && taskList.length === 0}}" style="color: #997625; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 28rpx;">小主，这里是空的。</view>
-      <history a:for="taskList" key="{{item.groupId}}" taskName="{{item.title}}" deadLine="{{item.endTime}}" type="{{item.type}}" finishedPlayerNum="{{item.finishedPeople}}" hasFinished="{{item.hasFinished}}" id="{{item.groupId}}" onTask="onGetTaskMoreInfo"/>
+      <history a:for="{{taskList}}" key="{{item.groupId}}" taskName="{{item.title}}" deadLine="{{item.endTime}}" type="{{item.type}}" finishedPlayerNum="{{item.finishedPeople}}" hasFinished="{{item.hasFinished}}" id="{{item.groupId}}" onTask="onGetTaskMoreInfo"/>
     </view>
   </view>
 </view>

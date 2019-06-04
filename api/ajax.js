@@ -63,6 +63,7 @@ const ajax = (url, methods = 'GET', data = {}, headers = {'Content-Type': 'appli
     })
   } else {
     let res = Route(url)
+    console.log(url, res)
     return new Promise((resolve, reject) => {
       resolve(res)
     })
